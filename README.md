@@ -1,0 +1,3 @@
+# News
+
+Django News Project 
