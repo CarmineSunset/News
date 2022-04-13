@@ -13,19 +13,19 @@
                     Категория: <a href="{{ news_item.category.get_absolute_url }}"> {{ news_item.category }} </a>
                 </div>
                 <div class="card-body">
-                    <div class="media p-3">
+
                         {% if item.photo %}
-                        <img src="{{ item.photo.url }}" width="350" class="mr-3 float-left" style="float:left;">
+                        <img src="{{ item.photo.url }}" width="350" class="float-left mr-3" style="float:left;">
                         {% else %}
-                        <img src="https://picsum.photos/id/1060/350/235/?blur" alt="" class="mr-3 float-left" style="float:left;">
+                        <img src="https://picsum.photos/id/1060/350/235/?blur" alt="" class="float-left mr-3" style="float:left;">
 
                         {% endif %}
 
-                        <div class="media-body p-3">
+
                             <h5 class="card-title {% cycle 'text-danger' 'text-success' %}">{{ news_item.title }}</h5>
-                            <p class="card-text ">{{ news_item.content|safe|linebreaks}}</p>
-                        </div>
-                    </div>
+                            <p class="card-text ml-3">{{ news_item.content|safe|linebreaks}}</p>
+
+
 
 
                 <div class="card-footer text-muted">
